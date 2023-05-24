@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.selected {
+  background-color: lightgray;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  margin-bottom: 2.5rem;
+}
+.container .outter-component {
+  flex: 1;
+  margin: 2rem 0px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .outter-component .inner-component {
+  display: flex;
+  gap: 20px;
+}
+.container .outter-component .inner-component .inner {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.33);
+  padding: 15px;
+}
+.container .outter-component .inner-component .inner .form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  position: relative;
+}
+.container .outter-component .inner-component .inner .form-inputs input {
+  padding: 10px 15px;
+  font-size: 14px;
+}
+.container .outter-component .inner-component .inner .form-inputs ul {
+  position: absolute;
+  top: 85%;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  background-color: aquamarine;
+  z-index: 999;
+}
+.container .other-component {
+  flex: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0px 5rem;
+  flex-direction: column;
+  gap: 5px;
+}
+.container .other-component .component {
+  display: flex;
+  gap: 2px;
+}
+.container .other-component .component .pagination-container {
+  display: flex;
+  gap: 2px;
+}
+.container .other-component .component .pagination-container button {
+  padding: 4px 5px;
+  cursor: pointer;
+}
+.container .other-component .customTable {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: #7EA8F8;
+  border-style: solid;
+  color: #000000;
+}
+.container .other-component .customTable td,
+.container .other-component .customTable th {
+  border-width: 2px;
+  border-color: #7EA8F8;
+  border-style: solid;
+  padding: 5px;
+}
+.container .other-component .customTable td button {
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.container .other-component .customTable td button:first-child:hover {
+  background-color: rgb(0, 255, 170);
+  border-radius: 15px;
+}
+.container .other-component .customTable td button:last-child:hover {
+  background-color: rgb(255, 72, 0);
+  border-radius: 15px;
+}
+.container .other-component .customTable thead {
+  background-color: #7EA8F8;
+}
+
+.modal {
+  display: none;
+}
+.modal .modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal .modal-overlay .delete-dialog {
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.modal .modal-overlay .delete-dialog h2 {
+  margin-top: 0;
+}
+.modal .modal-overlay .delete-dialog p {
+  margin-bottom: 20px;
+}
+.modal .modal-overlay .delete-dialog .buttons {
+  display: flex;
+  justify-content: center;
+}
+.modal .modal-overlay .delete-dialog .buttons .cancel-button,
+.modal .modal-overlay .delete-dialog .buttons .delete-button {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal .modal-overlay .delete-dialog .buttons .cancel-button {
+  background-color: #adadad;
+  color: #000;
+  border: none;
+  margin-right: 10px;
+}
+.modal .modal-overlay .delete-dialog .buttons .delete-button {
+  background-color: #fc4c4c;
+  color: #000;
+  border: none;
+}
+.modal .modal-overlay .delete-dialog .buttons .cancel-button:hover,
+.modal .modal-overlay .delete-dialog .buttons .delete-button:hover {
+  opacity: 0.8;
+}
+
+.show-modal {
+  display: block;
+}
+
+#suggestions {
+  height: 200px;
+  overflow-y: hidden;
+}/*# sourceMappingURL=style.css.map */
