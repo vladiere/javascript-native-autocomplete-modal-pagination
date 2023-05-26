@@ -6,10 +6,12 @@ let itemsPerPage = 10;
 
 const suggestions = []
 
+document.addEventListener('DOMContentLoaded', function () {
+    FruitLibrary.modal()
+})
 
-autoCompleteSuggestions(suggestions)
-
-fetchFruitsData();
+FruitLibrary.fetchFruitsData();
+FruitLibrary.autoCompleteSuggestions(suggestions);
 
 const newItemsPerPage = () => {
     var selectBox = document.getElementById("selectCount");
@@ -17,6 +19,7 @@ const newItemsPerPage = () => {
     itemsPerPage = parseInt(selectedValue, 10);
     
     currentPage = 1;
-    renderFruits();
+    FruitLibrary.fetchFruitsData();
+    
 }
 
